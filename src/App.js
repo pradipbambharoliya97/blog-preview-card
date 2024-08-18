@@ -5,6 +5,7 @@ import { cardData } from './utils/copnstants';
 const App = () => (
   <main
     role='main'
+    aria-labelledby='main'
     className='bg-lime h-screen w-full flex items-center justify-center p-6'
   >
     <section className='flex flex-col gap-3 card-shadow bg-white max-w-sm border border-black-50 rounded-3xl p-6'>
@@ -21,9 +22,12 @@ const App = () => (
         <p className='text-sm font-medium'>Published {cardData.publishDate}</p>
       </div>
       <div className='flex flex-col gap-4'>
-        <h3 className='text-xl sm:text-2xl transition duration-150 font-bold hover:text-lime cursor-pointer'>
+        <h1
+          aria-labelledby='heading'
+          className='text-xl sm:text-2xl transition duration-150 font-bold hover:text-lime cursor-pointer'
+        >
           {cardData.title}
-        </h3>
+        </h1>
         <p className='text-base text-gray-500'>{cardData.descroption}</p>
         <div className='flex items-center gap-2'>
           <img
